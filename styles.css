@@ -22,7 +22,7 @@ body {
 }
 
 .container {
-  max-width: 780px;
+  max-width: 860px;
   margin: 0 auto;
   padding: 48px 24px 64px;
 }
@@ -33,6 +33,10 @@ body {
   gap: 32px;
   align-items: flex-start;
   margin-bottom: 16px;
+  padding: 24px;
+  background: #f7f8fa;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
 }
 
 .photo {
@@ -147,4 +151,13 @@ footer {
   .profile-text h1 { font-size: 1.7rem; }
 
   body { font-size: 16px; }
+}
+
+/* Print / save-as-PDF */
+@media print {
+  body { font-size: 11pt; }
+  .container { max-width: none; padding: 0; }
+  .profile { background: none; padding: 0; border: 0; }
+  a { color: var(--ink); }
+  section, li { break-inside: avoid; }
 }
